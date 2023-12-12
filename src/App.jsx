@@ -26,6 +26,7 @@ const App = () => {
         },
         body: JSON.stringify(payload),
         method: "POST",
+        
     })
       const data = await response.json()
       console.log('data', data)
@@ -35,6 +36,7 @@ const App = () => {
             bot:  data.candidates[0].content
           }
       ])
+      document.getElementById('input-button').value = "";
 
   
   }
